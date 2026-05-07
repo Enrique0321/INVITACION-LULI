@@ -1,7 +1,9 @@
 :root {
     --bg-color: #fefcfb;
-    --primary-color: #d14767; /* Rosa yucateco */
-    --secondary-color: #ae7817; /* Dorado filigrana */
+    --primary-color: #d14767;
+    /* Rosa yucateco */
+    --secondary-color: #ae7817;
+    /* Dorado filigrana */
     --text-dark: #304254;
     --text-light: #ffffff;
     --font-hero: 'Pinyon Script', cursive;
@@ -34,10 +36,10 @@ body {
     background-color: var(--bg-color);
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/LuliXV(42).jpg');
     background-size: cover;
-    background-position: center ;
+    background-position: center;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end ;
+    justify-content: flex-end;
     padding-bottom: 50px;
     align-items: center;
     z-index: 100;
@@ -51,13 +53,13 @@ body {
 }
 
 .envelope-content {
-    text-align:center;
+    text-align: center;
     z-index: 2;
     padding: 2rem;
     background: rgba(255, 255, 255, 0.541);
     border: 2px solid var(--secondary-color);
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
 }
 
@@ -96,13 +98,14 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.main-title, .name-hero {
+.main-title,
+.name-hero {
     font-family: var(--font-elegant);
     color: var(--primary-color);
     font-size: 4.5rem;
     line-height: 1.1;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .subtitle {
@@ -139,7 +142,7 @@ body {
     max-width: 600px;
     margin: 0 auto;
     background-color: #fff;
-    box-shadow: 0 0 40px rgba(0,0,0,0.08);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
     position: relative;
     overflow: hidden;
 }
@@ -188,7 +191,8 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    padding: 0 1rem 15vh 1rem; /* Espacio desde abajo */
+    padding: 0 1rem 15vh 1rem;
+    /* Espacio desde abajo */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -204,7 +208,7 @@ body {
     font-size: 2.8rem;
     line-height: 1.2;
     text-align: center;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     margin: 0;
 }
 
@@ -220,23 +224,28 @@ body {
 
 
 
-.letra-reflexiba{
+.letra-reflexiba {
     font-size: 1rem;
     font-weight: bold;
     line-height: 1;
     color: var(--primary-color);
     font-family: var(--font-elegant);
     text-align: center;
-    max-width: 80%;      /* Limita el ancho para que se vea "angosto" como el ejemplo */
-    margin: 0 auto;      /* Centra el bloque de texto horizontalmente */
-    line-height: 1.6;    /* Aumenta el espacio entre líneas para que respire la cursiva */
-    letter-spacing: 0.5px; /* Opcional: separa un poquito las letras para elegancia */
+    max-width: 80%;
+    /* Limita el ancho para que se vea "angosto" como el ejemplo */
+    margin: 0 auto;
+    /* Centra el bloque de texto horizontalmente */
+    line-height: 1.6;
+    /* Aumenta el espacio entre líneas para que respire la cursiva */
+    letter-spacing: 0.5px;
+    /* Opcional: separa un poquito las letras para elegancia */
 }
 
 h1.letra-reflexiba {
     margin-top: 0;
     margin-bottom: 0;
-    display: block; /* Asegura que respete el max-width y margin auto */
+    display: block;
+    /* Asegura que respete el max-width y margin auto */
 }
 
 
@@ -255,7 +264,8 @@ h1.letra-reflexiba {
     font-family: var(--font-elegant);
 }
 
-.date-container .day, .date-container .month {
+.date-container .day,
+.date-container .month {
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -276,18 +286,20 @@ h1.letra-reflexiba {
 }
 
 .time-box {
-    background-color: rgba(220, 150, 160, 0.85); /* Rosa pastel opaco */
+    background-color: rgba(220, 150, 160, 0.85);
+    /* Rosa pastel opaco */
     border: none;
     border-radius: 12px;
     padding: 12px 10px;
     min-width: 75px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .time-box span {
     display: block;
     font-size: 2.3rem;
-    font-weight: 500; /* Menos negrita */
+    font-weight: 500;
+    /* Menos negrita */
     color: white;
     font-family: var(--font-text);
     line-height: 1;
@@ -295,7 +307,8 @@ h1.letra-reflexiba {
 
 .time-box p {
     font-size: 1.1rem;
-    text-transform: none; /* Sin mayúsculas forzadas */
+    text-transform: none;
+    /* Sin mayúsculas forzadas */
     letter-spacing: 0;
     margin-top: 4px;
     margin-bottom: 0;
@@ -310,7 +323,7 @@ h1.letra-reflexiba {
     border-radius: 15px;
     padding: 2.5rem 1.5rem;
     margin: 0 auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
     object-fit: contain;
     position: relative;
@@ -323,9 +336,9 @@ h1.letra-reflexiba {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     object-fit: cover;
-    z-index: -1; 
+    z-index: -1;
     opacity: 0.6;
 }
 
@@ -347,7 +360,8 @@ h1.letra-reflexiba {
 }
 
 /* Botones */
-.primary-btn, .secondary-btn {
+.primary-btn,
+.secondary-btn {
     display: inline-block;
     padding: 12px 30px;
     border-radius: 25px;
@@ -410,8 +424,8 @@ h1.letra-reflexiba {
     max-width: 45%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
     object-fit: cover;
 }
 
@@ -423,7 +437,8 @@ h1.letra-reflexiba {
     top: 20px;
     left: 20px;
     padding: 8px 15px;
-    background-color: rgba(235, 150, 165, 0.9); /* Rosa pálido semitransparente */
+    background-color: rgba(235, 150, 165, 0.9);
+    /* Rosa pálido semitransparente */
     border: 2px solid rgba(209, 71, 103, 0.5);
     border-radius: 20px;
     color: white;
@@ -433,7 +448,7 @@ h1.letra-reflexiba {
     gap: 10px;
     cursor: pointer;
     z-index: 99;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     font-family: var(--font-text);
     font-weight: bold;
@@ -452,7 +467,8 @@ h1.letra-reflexiba {
     width: 3px;
     background-color: white;
     border-radius: 2px;
-    height: 4px; /* Altura cuando está en pausa */
+    height: 4px;
+    /* Altura cuando está en pausa */
     transition: height 0.2s ease;
 }
 
@@ -460,14 +476,30 @@ h1.letra-reflexiba {
     animation: equalizerPlay 0.8s infinite alternate ease-in-out;
 }
 
-.music-toggle-btn.playing .equalizer .bar:nth-child(1) { animation-delay: 0.1s; }
-.music-toggle-btn.playing .equalizer .bar:nth-child(2) { animation-delay: 0.4s; }
-.music-toggle-btn.playing .equalizer .bar:nth-child(3) { animation-delay: 0.2s; }
-.music-toggle-btn.playing .equalizer .bar:nth-child(4) { animation-delay: 0.0s; }
+.music-toggle-btn.playing .equalizer .bar:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.music-toggle-btn.playing .equalizer .bar:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.music-toggle-btn.playing .equalizer .bar:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.music-toggle-btn.playing .equalizer .bar:nth-child(4) {
+    animation-delay: 0.0s;
+}
 
 @keyframes equalizerPlay {
-    0% { height: 4px; }
-    100% { height: 15px; }
+    0% {
+        height: 4px;
+    }
+
+    100% {
+        height: 15px;
+    }
 }
 
 /* Sección Familia */
@@ -485,9 +517,32 @@ h1.letra-reflexiba {
     margin: 1rem 0;
 }
 
+.img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 2rem 0;
+    /* Da espacio para que la sombra "respire" y no se corte */
+}
+
+.luli-image {
+    width: 90%;
+    max-width: 450px;
+    max-height: 75vh; /* Aumentamos el alto máximo para que no recorte tanto */
+    height: auto;
+    border-radius: 15px;
+    /* Sombra más oscura, amplia y elegante como en tu referencia */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+    object-position: center bottom; /* Asegura que la parte inferior (el agua) siempre sea visible */
+    display: block;
+    /* Eliminamos los margins auto porque ahora el flex del contenedor lo centra */
+}
+
 /* Galería de Fotos (Carrusel Deslizable) */
 .gallery-section {
-    padding: 4rem 0; /* Padding lateral 0 para scroll completo */
+    padding: 4rem 0;
+    /* Padding lateral 0 para scroll completo */
 }
 
 .gallery-container {
@@ -497,31 +552,39 @@ h1.letra-reflexiba {
 
 .gallery-slider {
     display: flex;
-    align-items: center; /* Centra las imágenes verticalmente si varían en altura */
+    align-items: center;
+    /* Centra las imágenes verticalmente si varían en altura */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 15px;
     padding: 20px 2rem;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .gallery-slider::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none;
+    /* Chrome/Safari */
 }
 
 .gallery-img {
     flex: 0 0 auto;
-    width: 85vw; /* Ocupa buen espacio en móviles */
-    max-width: 350px; /* Límite para pantallas grandes */
-    max-height: 60vh; /* Límite de altura para no desbordar */
+    width: 85vw;
+    /* Ocupa buen espacio en móviles */
+    max-width: 350px;
+    /* Límite para pantallas grandes */
+    max-height: 60vh;
+    /* Límite de altura para no desbordar */
     height: auto;
-    object-fit: contain; /* Asegura que la foto completa sea visible */
+    object-fit: contain;
+    /* Asegura que la foto completa sea visible */
     border-radius: 15px;
     scroll-snap-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     border: 3px solid var(--secondary-color);
-    background-color: rgba(255, 255, 255, 0.5); /* Fondo sutil por si quedan espacios */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Fondo sutil por si quedan espacios */
 }
 
 .gallery-hint {
@@ -539,19 +602,25 @@ h1.letra-reflexiba {
 
 /* Media Queries */
 @media (max-width: 480px) {
-    .main-title, .name-hero {
+
+    .main-title,
+    .name-hero {
         font-size: 3.5rem;
     }
+
     .countdown {
         gap: 8px;
     }
+
     .time-box {
         min-width: 65px;
         padding: 10px 5px;
     }
+
     .time-box span {
         font-size: 1.8rem;
     }
+
     .time-box p {
         font-size: 0.7rem;
     }
@@ -563,12 +632,13 @@ h1.letra-reflexiba {
 }
 
 .main-event-container {
-    background: rgba(245, 235, 225, 0.4); /* Fondo sutil para dar sensación de contenedor */
+    background: rgba(245, 235, 225, 0.4);
+    /* Fondo sutil para dar sensación de contenedor */
     border-radius: 20px;
     padding: 3rem 1.5rem;
     margin: 0 auto;
     text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     max-width: 500px;
     border: 1px solid rgba(174, 120, 23, 0.2);
 }
@@ -621,11 +691,12 @@ h1.letra-reflexiba {
 }
 
 .time-box-pink {
-    background-color: #d4a5a5; /* Color similar al de la imagen */
+    background-color: #d4a5a5;
+    /* Color similar al de la imagen */
     border-radius: 8px;
     padding: 10px 8px;
     min-width: 65px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     color: white;
 }
 
@@ -648,16 +719,20 @@ h1.letra-reflexiba {
     .elegant-name {
         font-size: 3.5rem;
     }
+
     .countdown-display {
         gap: 8px;
     }
+
     .time-box-pink {
         min-width: 55px;
         padding: 8px 5px;
     }
+
     .time-box-pink span {
         font-size: 1.8rem;
     }
+
     .time-box-pink p {
         font-size: 0.8rem;
     }
