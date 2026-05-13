@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Número de WhatsApp (debe incluir código de país, sin signos ni espacios. Ej: 5219991234567 para México)
-            const phone = "52999548658"; // <-- ¡EL USUARIO DEBE CAMBIAR ESTO!
+            const phone = "529995438658"; // <-- ¡EL USUARIO DEBE CAMBIAR ESTO!
 
             // Construir el mensaje
             let mensaje = `¡Hola! Confirmo la asistencia de la familia *${familia}* a los XV de Luli.%0A`;
