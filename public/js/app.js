@@ -12,44 +12,37 @@ document.addEventListener('DOMContentLoaded', () => {
         if (bgMusic.paused) {
             bgMusic.play();
             musicToggleBtn.classList.add('playing');
-            if(musicBtnText) musicBtnText.innerText = 'DETENER';
+            if (musicBtnText) musicBtnText.innerText = 'DETENER';
         } else {
             bgMusic.pause();
             musicToggleBtn.classList.remove('playing');
-            if(musicBtnText) musicBtnText.innerText = 'REPRODUCIR';
+            if (musicBtnText) musicBtnText.innerText = 'REPRODUCIR';
         }
     });
 
     openBtn.addEventListener('click', () => {
         // Ocultar sobre animado
         envelopeScreen.classList.add('open');
-        
+
         // Mostrar contenido principal
         invitationContent.classList.remove('hidden');
-        
+
         // Iniciar audio
         bgMusic.play().then(() => {
             musicToggleBtn.classList.add('playing');
-            if(musicBtnText) musicBtnText.innerText = 'DETENER';
+            if (musicBtnText) musicBtnText.innerText = 'DETENER';
         }).catch(error => {
             console.log("Audio autoplay was prevented:", error);
             musicToggleBtn.classList.remove('playing');
-            if(musicBtnText) musicBtnText.innerText = 'REPRODUCIR';
+            if (musicBtnText) musicBtnText.innerText = 'REPRODUCIR';
         });
 
         // Trigger animations for elements in view
         setTimeout(handleScrollAnimations, 100);
     });
 
-    // 2. Cuenta Regresiva (Viernes 13 de Marzo, 20:00 hrs)
-    // Usamos el año actual si ya pasó, usamos el próximo
-    const now = new Date();
-    let targetYear = now.getFullYear();
-    let targetDate = new Date(`${targetYear}-03-13T20:00:00`);
-    
-    if(now > targetDate) {
-        targetDate = new Date(`${targetYear + 1}-03-13T20:00:00`);
-    }
+    // 2. Cuenta Regresiva (18 de Julio de 2026, 12:30 hrs)
+    const targetDate = new Date('2026-07-18T02:00:00');
 
     const daysEl = document.getElementById('days');
     const hoursEl = document.getElementById('hours');
@@ -83,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Animaciones al hacer scroll (Fade In)
     const sections = document.querySelectorAll('.section');
-    
+
     // Add fade-in class to all sections initially
     sections.forEach(sec => sec.classList.add('fade-in'));
 
@@ -100,4 +93,70 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     window.addEventListener('scroll', handleScrollAnimations);
+
+    // 4. Manejo de Confirmación de Pase (WhatsApp)
+    const btnConfirmar = document.getElementById('btn-confirmar');
+    if (btnConfirmar) {
+        btnConfirmar.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const familiaInput = document.getElementById('familia-input');
+            const familia = familiaInput ? familiaInput.value.trim() : '';
+
+            if (!familia) {
+                alert('Por favor, escribe el nombre de tu familia antes de confirmar.');
+                if (familiaInput) familiaInput.focus();
+                return;
+            }
+
+            // Número de WhatsApp (debe incluir código de país, sin signos ni espacios. Ej: 5219991234567 para México)
+            const phone = "52999548658"; // <-- ¡EL USUARIO DEBE CAMBIAR ESTO!
+
+            // Construir el mensaje
+            let mensaje = `¡Hola! Confirmo la asistencia de la familia *${familia}* a los XV de Luli.%0A`;
+            mensaje += `(Pase reservado de 2 lugares)`;
+
+            const url = `https://wa.me/${phone}?text=${mensaje}`;
+            window.open(url, '_blank');
+        });
+    }
+
+    // 5. Carrusel Automático
+    const gallerySlider = document.querySelector('.gallery-slider');
+    if (gallerySlider) {
+        let isInteracting = false;
+        
+        // Pausar el autoplay si el usuario interactúa con el carrusel
+        gallerySlider.addEventListener('touchstart', () => isInteracting = true);
+        gallerySlider.addEventListener('touchend', () => {
+            setTimeout(() => isInteracting = false, 3000); // Reanudar después de 3 segundos
+        });
+        gallerySlider.addEventListener('mouseenter', () => isInteracting = true);
+        gallerySlider.addEventListener('mouseleave', () => isInteracting = false);
+
+        setInterval(() => {
+            if (isInteracting) return;
+            
+            const firstImg = gallerySlider.querySelector('.gallery-img');
+            if (!firstImg) return;
+            
+            // Obtener el ancho de desplazamiento (ancho de imagen + gap)
+            const scrollAmount = firstImg.clientWidth + 15; 
+            
+            // Verificar si llegamos al final del scroll
+            if (gallerySlider.scrollLeft + gallerySlider.clientWidth >= gallerySlider.scrollWidth - 10) {
+                // Volver al inicio suavemente
+                gallerySlider.scrollTo({
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                // Avanzar a la siguiente imagen
+                gallerySlider.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+        }, 3000); // Cambia de foto cada 3 segundos
+    }
 });
