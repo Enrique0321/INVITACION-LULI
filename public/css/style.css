@@ -34,7 +34,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: var(--bg-color);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/assets/LuliXV\(42\).jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/LuliXV(42).jpg');
     background-size: cover;
     background-position: center;
     display: flex;
