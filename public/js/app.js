@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Construir el mensaje
             let mensaje = `¡Hola! Confirmo la asistencia de la familia *${familia}* a los XV de Luli.%0A`;
-            mensaje += `(Pase reservado de 2 lugares)`;
+            mensaje += `(Pase reservado de 3 lugares)`;
 
             const url = `https://wa.me/${phone}?text=${mensaje}`;
             window.open(url, '_blank');
